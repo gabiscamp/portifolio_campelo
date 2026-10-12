@@ -11,7 +11,18 @@ export const texts = {
       body: 'Estudante de Engenharia de Software na PUC Minas com formação técnica em Informática pelo Senac. Estagiária em Desenvolvimento Backend Web na VTreal, onde atuo com APIs REST, bancos de dados e metodologias ágeis. Tenho interesse em Backend, Mobile e Inteligência Artificial/Machine Learning.',
       skills: 'Habilidades',
     },
-    screen: {title:'Projetos', sub:'Linha do tempo · do mais antigo ao mais recente', repo:'Ver no GitHub →'},
+    experience: {
+      title: 'Experiências',
+      items: [
+        {org:'VTreal',role:'Estagiária em Desenvolvimento Backend Web',period:'Set/2025 – atual',desc:'Desenvolvimento e manutenção de sistemas web com foco em backend. Criação e integração de APIs REST, manipulação de bancos de dados e otimização de regras de negócio. Versionamento com Git/GitHub e práticas ágeis.'},
+        {org:'PUC Minas',role:'Graduação em Engenharia de Software',period:'2025 – atual',desc:'Cursando Engenharia de Software com foco em desenvolvimento de sistemas, arquitetura de software e metodologias ágeis.'},
+        {org:'Senac Venda Nova',role:'Curso Técnico em Informática',period:'2023 – 2025',desc:'Formação técnica completa em Informática.'},
+        {org:'Senac Venda Nova',role:'Desenvolvimento Mobile',period:'Concluído',desc:'Curso complementar com foco em desenvolvimento de apps mobile usando Dart/Flutter e React Native.'},
+        {org:'Senac Venda Nova',role:'Desenvolvimento Full-Stack',period:'Concluído',desc:'Curso complementar cobrindo front-end e back-end, integração de APIs e bancos de dados.'},
+        {org:'Senac Venda Nova',role:'Programação Web',period:'Concluído',desc:'Curso complementar focado em HTML, CSS, JavaScript e desenvolvimento de aplicações web.'},
+      ],
+    },
+    screen: {title:'Projetos',sub:'Linha do tempo · do mais antigo ao mais recente',repo:'Ver no GitHub →'},
   },
   en: {
     role: 'Software Engineering · Backend, Mobile & AI',
@@ -25,44 +36,25 @@ export const texts = {
       body: 'Software Engineering student at PUC Minas with a technical degree in IT from Senac. Currently interning as a Backend Web Developer at VTreal, working with REST APIs, databases and agile methodologies. Interested in Backend, Mobile and AI/Machine Learning.',
       skills: 'Skills',
     },
-    screen: {title:'Projects', sub:'Timeline · oldest to newest', repo:'View on GitHub →'},
+    experience: {
+      title: 'Experience',
+      items: [
+        {org:'VTreal',role:'Backend Web Development Intern',period:'Sep/2025 – present',desc:'Development and maintenance of web systems focused on backend. Building and integrating REST APIs, database management and business logic optimization. Git/GitHub versioning and agile practices.'},
+        {org:'PUC Minas',role:'Software Engineering Degree',period:'2025 – present',desc:'Pursuing a Software Engineering degree focused on systems development, software architecture and agile methodologies.'},
+        {org:'Senac Venda Nova',role:'IT Technical Diploma',period:'2023 – 2025',desc:'Complete technical training in Information Technology.'},
+        {org:'Senac Venda Nova',role:'Mobile Development',period:'Completed',desc:'Course focused on mobile app development using Dart/Flutter and React Native.'},
+        {org:'Senac Venda Nova',role:'Full-Stack Development',period:'Completed',desc:'Course covering front-end and back-end development, API integration and databases.'},
+        {org:'Senac Venda Nova',role:'Web Programming',period:'Completed',desc:'Course focused on HTML, CSS, JavaScript and web application development.'},
+      ],
+    },
+    screen: {title:'Projects',sub:'Timeline · oldest to newest',repo:'View on GitHub →'},
   },
 }
 
 export const projects = [
-  {
-    year: 2024,
-    name: 'E-commerce de Doces',
-    tech: ['PHP', 'MySQL', 'JavaScript'],
-    desc: 'Loja virtual completa com catálogo de produtos, carrinho, checkout e painel admin. Notificações automáticas via API do WhatsApp.',
-    repo: 'https://github.com/gabiscamp/e-commerce',
-  },
-  {
-    year: 2025,
-    name: 'RH com Reconhecimento Facial',
-    tech: ['Python', 'Flask', 'scikit-learn'],
-    desc: 'Sistema de controle de acesso com reconhecimento facial e análise de desempenho de funcionários usando Machine Learning.',
-    repo: 'https://github.com/gabiscamp/reconhecimento-facial',
-  },
-  {
-    year: 2025,
-    name: 'Educação Financeira (TIAW)',
-    tech: ['JavaScript', 'HTML', 'CSS'],
-    desc: 'Aplicação web de educação financeira desenvolvida na disciplina TIAW da PUC Minas.',
-    repo: 'https://github.com/gabiscamp/icei-pucminas-psg-ads-m-2025-2-tiaw-educacao-financeira',
-  },
-  {
-    year: 2026,
-    name: 'PI Van – Gestão de Transporte',
-    tech: ['Flutter', 'Dart', 'Firebase'],
-    desc: 'App mobile para gestão de transporte escolar com autenticação, cadastro de turmas e planejamento de rotas.',
-    repo: 'https://github.com/gabiscamp/pi-van',
-  },
-  {
-    year: 2026,
-    name: 'Este Portfólio 3D',
-    tech: ['React', 'Three.js', 'R3F'],
-    desc: 'Portfólio interativo com cena 3D, animações e referências a séries. Feito para a disciplina DIAW na PUC Minas.',
-    repo: 'https://github.com/gabiscamp',
-  },
+  {year:2024,name:'E-commerce de Doces',tech:['PHP','MySQL','JavaScript'],desc:'Loja virtual completa com catálogo de produtos, carrinho, checkout e painel admin. Notificações automáticas via API do WhatsApp.',repo:'https://github.com/gabiscamp/e-commerce'},
+  {year:2025,name:'RH com Reconhecimento Facial',tech:['Python','Flask','scikit-learn'],desc:'Sistema de controle de acesso com reconhecimento facial e análise de desempenho de funcionários usando Machine Learning.',repo:'https://github.com/gabiscamp/reconhecimento-facial'},
+  {year:2025,name:'Educação Financeira (TIAW)',tech:['JavaScript','HTML','CSS'],desc:'Aplicação web de educação financeira desenvolvida na disciplina TIAW da PUC Minas.',repo:'https://github.com/gabiscamp/icei-pucminas-psg-ads-m-2025-2-tiaw-educacao-financeira'},
+  {year:2026,name:'PI Van – Gestão de Transporte',tech:['Flutter','Dart','Firebase'],desc:'App mobile para gestão de transporte escolar com autenticação, cadastro de turmas e planejamento de rotas.',repo:'https://github.com/gabiscamp/pi-van'},
+  {year:2026,name:'Este Portfólio 3D',tech:['React','Three.js','R3F'],desc:'Portfólio interativo com cena 3D, animações e referências a séries. Feito para a disciplina DIAW na PUC Minas.',repo:'https://github.com/gabiscamp'},
 ]

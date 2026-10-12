@@ -23,11 +23,20 @@ export default function Panel({ focus, lang }) {
       </aside>
     )
   }
-  if (focus === 'projects') {
+  if (focus === 'experience') {
     return (
       <aside className="panel">
-        <h2>{tr.screen.title}</h2>
-        <p>{tr.screen.sub}</p>
+        <h2>{tr.experience.title}</h2>
+        {tr.experience.items.map((it, i) => (
+          <div className="card" key={i}>
+            <div className="card-top">
+              <strong>{it.org}</strong>
+              <span>{it.period}</span>
+            </div>
+            <div className="card-role">{it.role}</div>
+            <p>{it.desc}</p>
+          </div>
+        ))}
       </aside>
     )
   }
