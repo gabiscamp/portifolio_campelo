@@ -1,50 +1,49 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { Canvas } from '@react-three/fiber'
 
 export default function App() {
-  const [focus, setFocus] = useState('overview')
-  const [lang, setLang] = useState('pt')
+const [sec, setSec] = useState('overview')
+const [lang, setLang] = useState('pt')
 
-  const labels = {
-    pt: { about: 'Sobre Mim', projects: 'Projetos', experience: 'Experiências', contact: 'Contato', back: '← Voltar à sala' },
-    en: { about: 'About Me', projects: 'Projects', experience: 'Experience', contact: 'Contact', back: '← Back to the room' },
-  }
-  const nav = labels[lang]
+const nomes = {
+pt: {about:'Sobre Mim',projects:'Projetos',experience:'Experiências',contact:'Contato',agenda:'Agenda'},
+en: {about:'About Me',projects:'Projects',experience:'Experience',contact:'Contact',agenda:'Schedule'}
+}
 
-  return (
-    <div className="app">
-      <Canvas shadows dpr={[1, 2]} camera={{ fov: 40, position: [0, 2.4, 9], near: 0.1, far: 80 }}>
-        <color attach="background" args={['#0b0d11']} />
-        <ambientLight intensity={0.3} />
-      </Canvas>
+const voltar = lang === 'pt' ? '← Voltar' : '← Back'
 
-      <button className="lang" onClick={() => setLang(lang === 'pt' ? 'en' : 'pt')}>
-        {lang === 'pt' ? 'PT | en' : 'pt | EN'}
-      </button>
+return (
+<div className="app">
+<Canvas shadows dpr={[1,2]} camera={{fov:40, position:[0,2.4,9], near:0.1, far:80}}>
+<color attach="background" args={['#0b0d11']}/>
+<ambientLight intensity={0.3}/>
+</Canvas>
 
-      <nav className="menu">
-        <span className="brand">G. Campelo</span>
-        {['about', 'projects', 'experience', 'contact'].map((k) => (
-          <button key={k} className={focus === k ? 'active' : ''} onClick={() => setFocus(k)}>
-            {nav[k]}
-          </button>
-        ))}
-      </nav>
+<button className="lang" onClick={()=> setLang(lang==='pt'?'en':'pt')}>
+{lang==='pt'?'PT | en':'pt | EN'}
+</button>
 
-      {focus !== 'overview' && (
-        <button className="back" onClick={() => setFocus('overview')}>
-          {nav.back}
-        </button>
-      )}
+<nav className="menu">
+<span className="brand">G. Campelo</span>
+{['about','projects','experience','contact','agenda'].map(k=>(
+<button key={k} className={sec===k?'active':''} onClick={()=>setSec(k)}>
+{nomes[lang][k]}
+</button>
+))}
+</nav>
 
-      {focus !== 'overview' && (
-        <aside className="panel">
-          <h2>{nav[focus]}</h2>
-          <p style={{ color: '#8b90a0' }}>
-            {lang === 'pt' ? 'Conteúdo será implementado na Sprint 2.' : 'Content will be implemented in Sprint 2.'}
-          </p>
-        </aside>
-      )}
-    </div>
-  )
+{sec !== 'overview' && (
+<button className="back" onClick={()=>setSec('overview')}>{voltar}</button>
+)}
+
+{sec !== 'overview' && (
+<aside className="panel">
+<h2>{nomes[lang][sec]}</h2>
+<p style={{color:'#8b90a0'}}>
+{lang==='pt'?'Conteúdo em desenvolvimento...':'Content under development...'}
+</p>
+</aside>
+)}
+</div>
+)
 }
