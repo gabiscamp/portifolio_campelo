@@ -1,4 +1,4 @@
-:root{--amber:#f2b84b;--purple:#7c5cbf;--bg:#0b0d11}
+:root{--amber:#f2b84b;--purple:#7c5cbf;--bg:#0b0d11;--ink:#1f2330}
 *{box-sizing:border-box}
 html,body,#root{height:100%;margin:0;background:var(--bg);color:#fff;font-family:'Segoe UI',system-ui,Arial,sans-serif;overflow:hidden}
 .app{position:fixed;inset:0}
@@ -45,7 +45,23 @@ animation:slide 0.5s ease both;
 }
 @keyframes slide{from{opacity:0;transform:translateX(30px)}}
 .panel h2{margin:0 0 14px;font-size:28px;color:#fff}
+.panel h3{margin:18px 0 8px;font-size:16px;color:#c4b5e0}
 .panel p{line-height:1.55;color:#a8adb8}
+
+.about-head{display:flex;gap:14px;align-items:center;margin-bottom:10px}
+.about-head p{margin:2px 0 0;font-size:14px}
+.avatar{
+width:90px;height:90px;border-radius:50%;
+background:rgba(124,92,191,0.2);
+border:3px solid var(--purple);
+object-fit:cover;flex:none;
+}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.tags em{
+background:rgba(124,92,191,0.2);color:#c4b5e0;
+font-style:normal;font-size:12px;padding:3px 10px;
+border-radius:999px;border:1px solid rgba(124,92,191,0.3);
+}
 
 @media(max-width:900px){
 .menu .brand{display:none}
