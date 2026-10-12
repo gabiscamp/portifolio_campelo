@@ -23,5 +23,13 @@ export default function Panel({ focus, lang }) {
       </aside>
     )
   }
+  if (focus === 'projects') {
+    return (
+      <aside className="panel">
+        <h2>{tr.screen.title}</h2>
+        <p>{tr.screen.sub}</p>
+      </aside>
+    )
+  }
   return null
 }
