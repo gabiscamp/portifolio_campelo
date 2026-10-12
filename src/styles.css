@@ -1,0 +1,79 @@
+:root {
+  --amber: #f2b84b;
+  --purple: #7c5cbf;
+  --bg: #0b0d11;
+  --ink: #1f2330;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.app { position: fixed; inset: 0; }
+canvas { display: block; }
+
+button { font-family: inherit; cursor: pointer; }
+
+.fade {
+  position: absolute; inset: 0; background: var(--bg);
+  opacity: 0; pointer-events: none; transition: opacity 0.6s ease;
+}
+.fade.on { opacity: 1; }
+
+/* botão de idioma */
+.lang {
+  position: absolute; top: 18px; left: 20px;
+  background: rgba(0, 0, 0, 0.35); color: #d9dce2;
+  border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 999px;
+  padding: 8px 16px; font-size: 14px; z-index: 6;
+}
+.lang:hover { color: var(--amber); border-color: var(--amber); }
+
+/* menu de navegação */
+.menu {
+  position: absolute; top: 0; left: 0; right: 0; height: 60px; z-index: 5;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  background: linear-gradient(#0b0d11cc, #0b0d1100);
+}
+.menu .brand { position: absolute; left: 130px; font-weight: 700; font-size: 18px; }
+.menu button {
+  background: transparent; border: 0; color: #d9dce2;
+  font-size: 16px; padding: 8px 16px; border-bottom: 3px solid transparent;
+}
+.menu button:hover { color: #fff; }
+.menu button.active { color: var(--amber); border-bottom-color: var(--amber); }
+
+@media (max-width: 900px) {
+  .menu .brand { display: none; }
+  .menu button { padding: 8px 8px; font-size: 14px; }
+}
+
+/* botão voltar */
+.back {
+  position: absolute; left: 20px; top: 74px; z-index: 5;
+  background: rgba(0, 0, 0, 0.5); color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 999px; padding: 8px 16px;
+}
+.back:hover { border-color: var(--amber); color: var(--amber); }
+
+/* painel lateral */
+.panel {
+  position: absolute; right: 24px; top: 84px; z-index: 5;
+  width: min(500px, calc(100vw - 32px)); max-height: calc(100vh - 110px); overflow: auto;
+  background: rgba(18, 20, 30, 0.92); color: #e2e4ea;
+  border: 1px solid rgba(124, 92, 191, 0.25);
+  border-radius: 16px; padding: 24px 26px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  animation: slide 0.5s ease both;
+}
+@keyframes slide { from { opacity: 0; transform: translateX(30px); } }
+.panel h2 { margin: 0 0 14px; font-size: 28px; color: #fff; }
+.panel p { line-height: 1.55; color: #a8adb8; }
