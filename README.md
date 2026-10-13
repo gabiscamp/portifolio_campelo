@@ -46,7 +46,7 @@
 ---
 
 ## 🔗 Links Úteis
-* 🌐 **Demo Online:** [Acesse o Portfólio](https://portifolio-campelo.vercel.app)
+* 🌐 **Demo Online:** [Acesse o Portfólio](http://portifolio-campelo.vercel.app/)
   > 💻 Aplicação hospedada na Vercel.
 * 🖥️ **Repositório:** [GitHub](https://github.com/gabiscamp/portifolio_campelo)
 
@@ -206,6 +206,24 @@ O projeto usa EmailJS com chaves hardcoded no código. Para maior segurança em 
 ---
 
 ## 🎥 Demonstração
+
+### 🌐 Aplicação em Execução
+
+| Intro (Abajur + Porta) | Sala Principal |
+|:---:|:---:|
+| <img src="public/img/intro.png" alt="Intro" width="400"> | <img src="public/img/principal.png" alt="Sala Principal" width="400"> |
+
+| Sobre Mim | Projetos |
+|:---:|:---:|
+| <img src="public/img/sobre_mim.png" alt="Sobre Mim" width="400"> | <img src="public/img/projetos.png" alt="Projetos" width="400"> |
+
+| Experiências | Contato |
+|:---:|:---:|
+| <img src="public/img/experiencias.png" alt="Experiências" width="400"> | <img src="public/img/contato.png" alt="Contato" width="400"> |
+
+| Agenda |
+|:---:|
+| <img src="public/img/agenda.png" alt="Agenda" width="400"> |
 
 ### Wireframes
 
