@@ -22,6 +22,13 @@ export const texts = {
         {org:'Senac Venda Nova',role:'Programação Web',period:'Concluído',desc:'Curso complementar focado em HTML, CSS, JavaScript e desenvolvimento de aplicações web.'},
       ],
     },
+    contact: {
+      title: 'Vamos conversar?',
+      name: 'Nome',
+      email: 'E-mail',
+      message: 'Mensagem',
+      send: 'Enviar',
+    },
     screen: {title:'Projetos',sub:'Linha do tempo · do mais antigo ao mais recente',repo:'Ver no GitHub →'},
   },
   en: {
@@ -46,6 +53,13 @@ export const texts = {
         {org:'Senac Venda Nova',role:'Full-Stack Development',period:'Completed',desc:'Course covering front-end and back-end development, API integration and databases.'},
         {org:'Senac Venda Nova',role:'Web Programming',period:'Completed',desc:'Course focused on HTML, CSS, JavaScript and web application development.'},
       ],
+    },
+    contact: {
+      title: "Let's talk?",
+      name: 'Name',
+      email: 'E-mail',
+      message: 'Message',
+      send: 'Send',
     },
     screen: {title:'Projects',sub:'Timeline · oldest to newest',repo:'View on GitHub →'},
   },
